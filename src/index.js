@@ -1,3 +1,9 @@
+var CronJob = require('cron').CronJob;
+var job = new CronJob('00 21 19 * * 1-7', function() {
+  /*
+   * Runs every day
+   * at 9:00:00 AM.
+   */
 const dayjs = require('dayjs');
 const uuid = require('uuid');
 const colors = require('colors');
@@ -39,14 +45,13 @@ let config = JSON.parse(rawConfig);
   });
 
   (async () => {
-   // const fromDate = dayjs(`${result.year}-${result.month}-01`).format('YYYY-MM-DD');
-  //  const toDate = dayjs(`${result.year}-${result.month + 1}-01`).format('YYYY-MM-DD');
-var datetime = new Date();
-var yesterday = new Date(datetime.getTime());
-yesterday.setDate(datetime.getDate() - 1);
+
+//var datetime = new Date();
+//var yesterday = new Date(datetime.getTime());
+//yesterday.setDate(datetime.getDate() - 1);
 	
-	//var yesterday =Date.parse("2024-05-01")
-	//var datetime = Date.parse("2024-05-03")
+	var yesterday =Date.parse("2024-05-03")
+	var datetime = Date.parse("2024-05-05")
 	
 	
 	const fromDate =formatDate(yesterday);
@@ -92,3 +97,8 @@ function formatDate(date) {
 
     return [year, month, day].join('-');
 }
+  }, function () {
+    /* This function is executed when the job stops */
+  },
+  true
+);
