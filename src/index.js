@@ -1,5 +1,5 @@
 var CronJob = require('cron').CronJob;
-var job = new CronJob('00 21 19 * * 1-7', function() {
+var job = new CronJob('00 30 19 * * 1-7', function() {
   /*
    * Runs every day
    * at 9:00:00 AM.
