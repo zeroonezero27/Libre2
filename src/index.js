@@ -1,9 +1,9 @@
-console.log('start');
+console.log('start2');
 
 const schedule = require('node-schedule');
 const rule = new schedule.RecurrenceRule();
-rule.hour = 20;
-rule.minute = 18;
+rule.hour = 9;
+rule.minute = 0;
 rule.tz = 'Europe/Moscow';
 
 const job = schedule.scheduleJob(rule, function(){
@@ -70,7 +70,7 @@ const job = schedule.scheduleJob(rule, function(){
   const foodEntries = await nightscout.getNightscoutFoodEntries(config.nightscoutUrl, config.nightscoutToken, fromDate, toDate);
   const insulinEntries = await nightscout.getNightscoutInsulinEntries(config.nightscoutUrl, config.nightscoutToken, fromDate, toDate);
   
-  console.log(glucoseEntries);
+  //console.log(glucoseEntries);
   
   
       if (glucoseEntries.length > 0 || foodEntries.length > 0 || insulinEntries.length > 0) {
