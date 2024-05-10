@@ -3,12 +3,12 @@ console.log('start');
 const schedule = require('node-schedule');
 const rule = new schedule.RecurrenceRule();
 rule.hour = 20;
-rule.minute = 9;
+rule.minute = 18;
 rule.tz = 'Europe/Moscow';
 
 const job = schedule.scheduleJob(rule, function(){
   console.log('start sched');
-  
+
   const dayjs = require('dayjs');
   const uuid = require('uuid');
   const colors = require('colors');
