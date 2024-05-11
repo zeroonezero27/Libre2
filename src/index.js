@@ -2,7 +2,7 @@ console.log('start2');
 
 const schedule = require('node-schedule');
 const rule = new schedule.RecurrenceRule();
-rule.hour = 9;
+rule.hour = 21;
 rule.minute = 0;
 rule.tz = 'Europe/Moscow';
 
