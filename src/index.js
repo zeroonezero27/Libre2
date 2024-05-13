@@ -1,12 +1,14 @@
 console.log('start2');
 
-const schedule = require('node-schedule');
-const rule = new schedule.RecurrenceRule();
-rule.hour = 21;
-rule.minute = 0;
-rule.tz = 'Europe/Moscow';
+// const schedule = require('node-schedule');
+// const rule = new schedule.RecurrenceRule();
+// rule.hour = 21;
+// rule.minute = 0;
+// rule.tz = 'Europe/Moscow';
 
-const job = schedule.scheduleJob(rule, function(){
+// const job = schedule.scheduleJob(rule, function()
+
+//{
   console.log('start sched');
 
   const dayjs = require('dayjs');
@@ -104,7 +106,7 @@ const job = schedule.scheduleJob(rule, function(){
       return [year, month, day].join('-');
   }
     
-});
+//});
 
 
 
